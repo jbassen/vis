@@ -1,0 +1,31 @@
+username, time, pass, submission
+
+1) get times for a problem with username by correctness + numberTotal
+2) separate by correctness
+3) group by username
+
+<circle cx="250" cy="25" r="25"/>
+
+{username: index}
+[{username:, time:, pass:}]
+
+var yScale = d3.scale.linear()
+                     .domain([0, d3.max(dataset, function(d) { return d[1]; })])
+                     .range([0, h]);
+
+
+
+
+
+
+Shoes (running + casual + sandals)
+Haircut
+Replace Sunglasses
+Clean Room
+
+
+- submission times + scores (aggregate and by assignment)
+- number of submissions + scores (by assignment)
+- number of characters changed per submission (by assignment + each student)
+- submissions by last transformation type
+- submissions by line number
