@@ -13,19 +13,28 @@ var yScale = d3.scale.linear()
                      .domain([0, d3.max(dataset, function(d) { return d[1]; })])
                      .range([0, h]);
 
-
-
-
-
-
 Shoes (running + casual + sandals)
 Haircut
 Replace Sunglasses
 Clean Room
 
 
-- submission times + scores (aggregate and by assignment)
-- number of submissions + scores (by assignment)
-- number of characters changed per submission (by assignment + each student)
-- submissions by last transformation type
-- submissions by line number
+PROOF CHECKER
+- get rid of jbassen, dill, mpkim, kgibb, nayakne, kggriswo
+- submission times vs scores (by exercise)
+
+-- add early submission and regular submission deadlines
+-- add legends
+- number of total submissions vs scores (by exercise)
+- number of submissions vs characters/lines (by exercise, exercise/student)
+- number of submissions vs line number
+- how long on average
+
+
+
+
+BLOCKS WORLD
+- submission times vs scores (aggregate, by exercise)
+- number of total submissions vs scores (by exercise)
+- number of submissions vs tokens (by exercise, exercise/student)
+- how long on average
