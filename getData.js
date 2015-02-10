@@ -9,9 +9,17 @@ var User = require('./models/User');
 
 mongoose.connect(process.env.MONGOHQ_URL);
 var summary = {};
-var naList = {"jbassen": "", "dill": "", "mpkim": "", "kgibb": "", "nayakne": "", "kggriswo": ""};
+var naList = {
+  "jbassen": "",
+  "dill": "",
+  "mpkim": "",
+  "kgibb": "",
+  "nayakne": "",
+  "kggriswo": ""
+};
 
-// data = [{exercise, username, timeMil, timeStr, hasAttempted, willAttempt, isPassing, willPass, currentSub, finalSub}]
+// data = [{exercise, username, timeMil, timeStr, hasAttempted, willAttempt,
+// isPassing, willPass, currentSub, finalSub, started, delta}]
 
 Interaction
 .find()
@@ -23,12 +31,16 @@ Interaction
 
   mongoose.connection.close();
 
+  var started = 0;
   var attempts = 0;
   var willPass = false;
 
   for(var i = 0; i < subs.length; i++) {
     if( _.has(naList, subs[i].username) ) {
       continue;
+    }
+    if (attempts === 0) {
+      started = subs[i].time.getTime();
     }
     attempts += 1;
     if( _.has(JSON.parse(subs[i].grade), "message") ) {
@@ -55,6 +67,7 @@ Interaction
     // /console.log(exercise + ": " + willPass);
 
     summary[exercise][username] = {
+      started: started,
       willAttempt: willAttempt,
       fTimeMillis: timeMil,
       fTimeString: timeStr,
@@ -85,6 +98,11 @@ Interaction
       isPassing = true;
     }
 
+    var delta = 0
+    if (subs[i].time.getTime() !== summary[subs[i].exercise][subs[i].username].started) {
+      delta = subs[i].time.getTime() - subs[i-1].time.getTime()
+    }
+
     data.push({
       exercise: subs[i].exercise.toString(),
       username: subs[i].username,
@@ -93,7 +111,9 @@ Interaction
       hasAttempted: hasAttempted,
       willAttempt: summary[subs[i].exercise][subs[i].username].willAttempt,
       isPassing: isPassing,
-      willPass: summary[subs[i].exercise][subs[i].username].willPass //,
+      willPass: summary[subs[i].exercise][subs[i].username].willPass,
+      started: summary[subs[i].exercise][subs[i].username].started,
+      delta: delta //,
       //currentSub: JSON.parse(subs[i].answer).proof,
       //finalSub: summary[username][exercise].finalSub
     });

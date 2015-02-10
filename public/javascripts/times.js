@@ -1,4 +1,4 @@
-var _id = "3";
+//var _id = "3";
 var ds = [];
 
 //Width and height

@@ -22,16 +22,22 @@ Clean Room
 PROOF CHECKER
 - get rid of jbassen, dill, mpkim, kgibb, nayakne, kggriswo
 - submission times vs scores (by exercise)
-
 -- add early submission and regular submission deadlines
+-- sort by start time
+- histograms of time between submissions
+
+- homework survival histogram
+
+
+- number of submissions vs number of lines (by exercise)
+- number of submissions vs number of lines (by student)
+- how long on average + score color (by exercise)
+
 -- add legends
-- number of total submissions vs scores (by exercise)
+-- csv file
+
+- number of total submissions vs score (by exercise)
 - number of submissions vs characters/lines (by exercise, exercise/student)
-- number of submissions vs line number
-- how long on average
-
-
-
 
 BLOCKS WORLD
 - submission times vs scores (aggregate, by exercise)

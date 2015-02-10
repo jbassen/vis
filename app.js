@@ -43,18 +43,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // ROUTES (EXPRESS)
 app.use(express.static(path.join(__dirname, 'public')));
-app.get('/times', function(req, res, next) {
+app.get('/:vis/:exercise', function(req, res, next) {
   res.render('d3', {
-    data: JSON.stringify(data.data)
+    data: JSON.stringify(data.data),
+    src: "/javascripts/" + req.params.vis + ".js",
+    exercise: "" + req.params.exercise
   });
-});
-
-app.get('/diff', function(req, res, next) {
-  res.send('diff');
-});
-
-app.get('/dist', function(req, res, next) {
-  res.send('dist');
 });
 
 
