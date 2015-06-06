@@ -1,0 +1,172 @@
+NEED:
+- student list (including those that dropped)
+- scoryst submissions
+- extensions
+- drops
+- schedule a meeting with Keith
+-
+
+
+ANALYSIS:
+- parse tree distance
+- differentiate between successful and unsuccessful student patterns
+- differentiate between effort required by student
+
+
+FLAG GRAPHS:
+- fix box alignment
+- fix box coloring (line through instead of border)
+- add username
+- add submission numbers
+- add submission times (as colored numbers)
+
+
+
+TOLEARN:
+- completion by time taken
+- completion by start time
+- completion by greatest deletion
+- completion by greatest proportion deleted
+- completion by longest attempted proof length
+- completion by use/nonuse of rule (both in first 20mins + overall)
+- completion by number of different rule types tried
+- completion by use of bad rule (perhaps over time)
+
+- time from first 15 minutes:
+
+
+TODO:
+a) the bars are printing too long, leading to overlapping
+b) the bars are not printing in order
+
+1) figure out what's going wrong with the visualizations
+- print total time
+- add breaks
+- change from borders to lines
+- add timeline to the bottom
+
+2) prep for clustering
+- time bins: (separate one for when they started vs whether they came back?)
+-- 24hrs before early deadline
+-- right before early deadline
+-- 24hrs before onTime deadline
+-- right before onTime deadline
+
+- time measurements:
+-- figure out median amount of time students take per step, ignoring first step
+--- use for binning
+-- figure out median amount of time a student take per step, ignoring first step
+--- reuse for first step, given number of steps attempted
+
+- total change in number of each rule type
+
+- presence of bad rule
+- presence of bad rule that lasted more than x time
+- presence of bad rule that lasted more than x submissions
+
+
+
+
+- number of steps with bad rule
+- amount of time with bad rule
+- percent of time with bad rule
+- ending with a bad rule
+- beginning submissions without rules
+- restarts
+- greatest reduction in of rules (across many steps)
+-
+
+
+
+
+-- change estimate to median amount of time, given the number of steps
+
+
+
+
+
+DATA MINING!!!
+
+filter out:
+- empty submissions (no bys)
+- people who never submitted anything
+
+independent:
+- start time
+- time of day
+- breaks
+- first step
+- how long to working first step
+- how many initial lines
+- largest number of tries on one step
+- largest amount ot time on one step
+- number of breaks / number of breaks per time spent
+-- 5-15 mins
+-- 15-60 mins
+-- 61-180 mins
+-- >180 mins
+- how long they spend between submissions
+- change per submission (just in terms of steps being used - with count of each step type)
+
+dependent:
+- success
+- time to finish
+-
+
+
+bayesian knowledge tracing - Ryan Baker
+
+
+time delta distribution
+
+
+
+
+
+
+
+
+X all times plots
+
+X startTime vs timeTaken
+
+X timeDelta distribution plots
+
+X first step length
+
+breaks per time spent
+
+absolute change in number of each step
+
+
+
+
+
+long breaks
+
+first step type
+
+after 5 mins:
+number of rules total
+average rules in use
+
+step that was missing the longest
+
+
+
+flag graphs with time plots
+
+
+
+how long it took, segregated by start time, without wrong answers
+(- time bins:
+-- 22hrs before early deadline
+-- 22hrs before early deadline -> 2hrs after
+-- 2hrs after early deadline -> onTime deadline):
+- time of day
+- breaks
+- first step
+- first step length
+- breaks per time spent
+- submissions vs time
+- average change per submission (absolute number)

@@ -25,11 +25,11 @@ PROOF CHECKER
 -- add early submission and regular submission deadlines
 -- sort by start time
 - histograms of time between submissions
-
-- homework survival histogram
-
+- exercise survival histograms
 
 - number of submissions vs number of lines (by exercise)
+
+
 - number of submissions vs number of lines (by student)
 - how long on average + score color (by exercise)
 
@@ -44,3 +44,24 @@ BLOCKS WORLD
 - number of total submissions vs scores (by exercise)
 - number of submissions vs tokens (by exercise, exercise/student)
 - how long on average
+
+
+
+group students into:
+- early
+- late
+- both
+- fail
+- maybe more...?
+
+show time spent
+- total
+- stack graph
+-
+
+on-hover
+- show time string
+- show student id
+
+show success over time
+show

@@ -1,0 +1,17 @@
+- swipe system for class and office hours
+- intervene if student goes too far down one path?
+- better error messages (crowdsourced?)
+- change the proof interface to ace + unicode / eliminate MathJax altogether
+- grading interface
+- create new blocks world problems
+- make many more problems in general
+- crowdsource sources of student misunderstanding through prerequisite problems
+- change problem ordering
+- introduce additional problems that will not be seen by all students
+- critique/improve/teach the problem solving process (introduce a new visualization?)
+- test different grading incentive schemes
+- use pre-test, pre-survey and post-test
+- identify "bad" problems and fix them
+- identify additional behavioral problems and "good" behavioral strategies
+- identify buggy rules and generate error messages for them
+- 

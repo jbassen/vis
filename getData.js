@@ -103,6 +103,17 @@ Interaction
       delta = subs[i].time.getTime() - subs[i-1].time.getTime()
     }
 
+    var currentSub = JSON.parse(subs[i].answer).proof;
+    var tokens = currentSub.split(" ");
+    var bys = 0;
+    for (var j=0; j<tokens.length; j++) {
+      if (tokens[j] === "by") {
+        bys += 1;
+      }
+    }
+
+    console.log(bys);
+
     data.push({
       exercise: subs[i].exercise.toString(),
       username: subs[i].username,
@@ -113,7 +124,8 @@ Interaction
       isPassing: isPassing,
       willPass: summary[subs[i].exercise][subs[i].username].willPass,
       started: summary[subs[i].exercise][subs[i].username].started,
-      delta: delta //,
+      delta: delta,
+      bys: bys //,
       //currentSub: JSON.parse(subs[i].answer).proof,
       //finalSub: summary[username][exercise].finalSub
     });

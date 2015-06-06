@@ -1,0 +1,3 @@
+1) check success of steps
+add timelines to plots
+make new plot for how time is being spent

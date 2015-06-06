@@ -1,0 +1,54 @@
+3-6: everyone that missed it first submitted in the last 24hrs or gave up after submitting early
+* amccabe was the only exception (5) -- only had 5 submissions
+
+7-11: everyone that missed it first submitted in the last 24hrs or gave up after submitting early
+* kbishop was the only exception (11) --
+
+The later you submit in the last 24hrs, the worse your odds are.
+
+
+
+
+
+- people who first submit many steps at once, fix if necessary
+
+- people who first submit with one or two steps
+-- end with a small proof / large proof
+-- grow quickly / slowly
+
+* shorter time correlated with smaller backtracking
+* longer time correlated with bigger backtracking
+*
+* shorter time correlated with submitting many steps at once
+* lingering on a step is bad (getting stuck?)
+
+
+
+-- only change the most recent step or two, if necessary
+- people who first submit with one or two steps, get to large proof
+-- only rarely do they reduce the proof length after getting a true result
+
+
+* ratio of distance from end of proof and number of times it's repeated
+* number of times step is tried before it "settles"
+* number of different steps tried before this step comes appears
+
+* time that goes by before the next step is found
+** percent of time spent on each step type, on average, taking ordered repeats into account
+
+
+(0) fix the data
+((a)) change the first and gap lengths to being the median time taken by user
+(())
+
+(1) fix the visualization
+((a)) up to down
+((b)) borders to lines, black is bad!
+((c)) fixed width per second (much wider)
+((d)) add dot plots above each
+((e)) add axis above the whole thing
+
+(2) model the time taken by...
+((a)) start time
+((b))
+((c))

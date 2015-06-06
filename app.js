@@ -1,7 +1,7 @@
 var _ = require('lodash');
 //var async = require('async');
 var bodyParser = require('body-parser');
-var data = require('./subs');
+var data = require('../smorgasbord');
 var express = require('express');
 var favicon = require('serve-favicon');
 var hbs = require('hbs');
@@ -44,6 +44,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // ROUTES (EXPRESS)
 app.use(express.static(path.join(__dirname, 'public')));
 app.get('/:vis/:exercise', function(req, res, next) {
+  res.render('d3', {
+    data: JSON.stringify(data.data),
+    src: "/javascripts/" + req.params.vis + ".js",
+    exercise: "" + req.params.exercise
+  });
+});
+app.get('/:vis/', function(req, res, next) {
   res.render('d3', {
     data: JSON.stringify(data.data),
     src: "/javascripts/" + req.params.vis + ".js",

@@ -1,6 +1,8 @@
 //var _id = "3";
 var ds = [
 0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0
 ];
 
@@ -25,6 +27,7 @@ if ( parseInt(_id) < 7 ) {
 
 //filter for a specific problem
 for (var i=0; i<data.length; i++) {
+  //if (data[i].exercise === _id && data[i].willPass === false) {
   if (data[i].exercise === _id) {
     //if (data[i].exercise !== 0) {
     var bin = data[i].bys;

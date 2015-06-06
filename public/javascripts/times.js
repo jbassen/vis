@@ -91,9 +91,11 @@ svg.selectAll("circle")
   } else if (d.willPass === true) {
     return "lightblue";
   } else {
-    return "red";
+    return "violet";
   }
 })
+.append("svg:title")
+.text(function(d) { return d.username + "\n" + d.timeStr; });
 
 svg.append("line")
 .attr("stroke-width", 1)
